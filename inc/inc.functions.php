@@ -7,7 +7,7 @@
     define('TL_ROOT', dirname(__DIR__));
     define('LOGIN', 'UEL311');
     define('PASSWORD', 'U31311');
-    define('DB_ARTICLES', TL_ROOT.'/dbal/articles.json');
+    define('DB_ARTICLES', TL_ROOT.'/db/articles.json');
 
     // Cette fonction a pour objectif de connecter l'utilisateur si il rentre les identifiants attendus
     function connectUser($login = null, $password = null){
