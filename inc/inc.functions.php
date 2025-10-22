@@ -56,8 +56,8 @@
     // Cette fonction va vérifier que l'article existe et si c'est le cas, il va aller chercher le contenu de celui-ci, le décoder et le retourner
     // Dans le cas ou l'article n'existe pas, il renvoie "null".
     function getArticlesFromJson(){
-        if(file_exist(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+        if(file_exists(DB_ARTICLES)) {
+            $contenu_json = file_get_contents(DB_ARTICLES);
             return json_decode($contenu_json, true);
         }
 
@@ -69,8 +69,8 @@
     // à l'$id_article fourni en argument.
     // Si aucun article ne correspond, la fonction ne retourne rien (null).
     function getArticleById($id_article = null){
-       if(file_exists(DB_ARTICLE)) {
-            $contenu_json = file_get_contents(DB_ARTICLE);
+       if(file_exists(DB_ARTICLES)) {
+            $contenu_json = file_get_contents(DB_ARTICLES);
             $_articles    = json_decode($contenu_json, true);
 
             foreach($_articles as $article){
