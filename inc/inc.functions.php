@@ -6,7 +6,7 @@
     // On définit les différentes constantes et on leur donne une valeur par défaut.
     define('TL_ROOT', dirname(__DIR__));
     define('LOGIN', 'UEL311');
-    define('PASSWORD', 'U31311');
+    define('PASSWORD', 'U31311'); // Le mot de passe n'est pas UEL311 mais chaque utilisateur peut mettre le mot de passe qu'il veut ^^
     define('DB_ARTICLES', TL_ROOT.'/db/articles.json');
 
     // Cette fonction a pour objectif de connecter l'utilisateur si il rentre les identifiants attendus
