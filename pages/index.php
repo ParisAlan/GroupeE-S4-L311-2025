@@ -9,14 +9,14 @@
 		</ul>
 	</div>
 	<div class="image">
-<!--  On remplit le alt pour l'accessibilité -->
+<!--  On remplit le alt pour l'accessibilité même si ici, ce n'est pas très important, c'est un bon réflexe à prendre. -->
 		<img src="images/banner.jpg" alt="Image de bannière" />
 	</div>
 </section>
 
 <?php 
 	$_articles = getArticlesFromJson();
-    // Ce code PHP utilise une variable compteur pour déterminer si un article s'affiche à gauche ou à droite
+    // Ce code PHP utilise une variable $compteur pour déterminer si un article s'affiche à gauche ou à droite
     // selon que sa position dans la liste est paire ou impaire avec le rajout d'une classe css correspondante
     // Les différentes valeurs sont insérées dynamiquement dans les balises HTML correspondantes avec echo $article
 
@@ -24,6 +24,7 @@
 		$compteur = 1;
 		foreach($_articles as $article){
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
+            // On augmente la valeur du compteur à chaque tour de boucle avec $compteur++
 			$compteur++;
 			?>
 				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="first">

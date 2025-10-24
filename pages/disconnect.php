@@ -1,5 +1,5 @@
 <?php
-// On fait bien attention de bien appeller la session_destroy avant de rediriger l'utilisateur et de exit.
+// On fait bien attention de bien appeler la session_destroy avant de rediriger l'utilisateur et de exit la page.
 	setDisconnectUser();
 
 	header('Location:index.php');

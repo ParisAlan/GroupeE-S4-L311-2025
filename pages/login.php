@@ -1,11 +1,11 @@
 <?php
 
-// Ce php va tout d'abord vérifier que la request method est bien en POST, puis par là suite, va venir vérifier que il existe bien
+// Ce php va tout d'abord vérifier que la request method est bien en POST, puis par là suite, va venir vérifier qu'il existe bien
 // une clé login et password, et qu'elles ne sont pas vides. Après, il va faire appel à la fonction ConnectUser qui va vérifier si
-// l'identifiant et le mot de passe sont bien ceux qui sont attendus.
+// l'identifiant et le mot de passe sont bien ceux qui sont attendus par les constantes définies en amont.
 
 // Dernièrement, dans le cadre ou l'utilisateur est déjà connecté ou si il a mis les bons identifiant, on le redirige directement vers l'index
-// sinon, on lui affiche un message ( variable $message ) qui indique le il vient de rentrer un mauvais login / mauvais mot de passe.
+// sinon, on lui affiche un message ( variable $message ) qui indique si il vient de rentrer un mauvais login / mauvais mot de passe.
 	$message = null;
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 	    if(array_key_exists('login', $_POST) && array_key_exists('password', $_POST)){

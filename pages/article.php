@@ -10,7 +10,7 @@
 	}
 ?>
 
-<!-- Cette section affiche les informations de l'article de manière dynamique avec les valeurs présentes dans $article -->
+<!-- Cette section affiche les informations de l'article de manière dynamique avec php echo, il utilise les valeurs présentes dans $article -->
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1><?php echo $article['titre'];?></h1>

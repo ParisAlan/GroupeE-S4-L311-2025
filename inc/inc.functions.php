@@ -6,15 +6,16 @@
     // On définit les différentes constantes et on leur donne une valeur par défaut.
     define('TL_ROOT', dirname(__DIR__));
     define('LOGIN', 'UEL311');
-    define('PASSWORD', 'U31311'); // Le mot de passe n'est pas UEL311 mais chaque utilisateur peut mettre le mot de passe qu'il veut ^^
+    define('PASSWORD', 'U31311'); // Le mot de passe n'est pas UEL311 mais 'U31311' comme on aurait pu le croire à la lecture
+                                  // mais chaque utilisateur peut mettre le mot de passe qu'il veut ^^ alors ce n'est pas une erreur
     define('DB_ARTICLES', TL_ROOT.'/db/articles.json');
 
-    // Cette fonction a pour objectif de connecter l'utilisateur si il rentre les identifiants attendus
+    // Cette fonction a pour objectif de connecter l'utilisateur s'il rentre les identifiants attendus définis auparavant dans les constantes
     function connectUser($login = null, $password = null){
         // La première boucle if va vérifier que les informations mises par l'utilisateur ne sont pas nuls
         if(!is_null($login) && !is_null($password)){
-            // Dans le cadre ou les informations mises par l'utilisateurs correspondent à les informations attendus
-            // alors, on return
+            // Dans le cadre ou les informations mises par l'utilisateurs correspondent strictement aux informations attendus par les constantes
+            // alors, on retourne un tableau contenant les informations. Dans le cas contraire, on retourne rien
             if($login === LOGIN && $password === PASSWORD){
                 return array(
                     'login'    => LOGIN,
